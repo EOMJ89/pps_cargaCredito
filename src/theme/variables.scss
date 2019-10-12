@@ -1,6 +1,48 @@
 // Ionic Variables and Theming. For more info, please see:
 // http://ionicframework.com/docs/theming/
 
+@font-face {
+  font-family: "Stark";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../assets/fonts/stark/Stark.otf");
+}
+
+@font-face {
+  font-family: "Stark Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../assets/fonts/stark/Stark\ Bold.otf");
+}
+
+@font-face {
+  font-family: "Stark Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../assets/fonts/stark/Stark\ Italic.otf");
+}
+
+@font-face {
+  font-family: "Stark Bold Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../assets/fonts/stark/Stark\ Bold\ Italic.otf");
+}
+
+@font-face {
+  font-family: "Tech";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../assets/fonts/et/ethnocentric\ rg.ttf");
+}
+
+@font-face {
+  font-family: "Tech It";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../assets/fonts/et/ethnocentric\ rg\ it.ttf");
+}
+
 /** Ionic CSS Variables **/
 :root {
   /** primary **/
@@ -74,4 +116,15 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+  --ion-font-family: "Stark";
+
+  .ion-color-frenchviolet {
+    --ion-color-base: #880ed3;
+    --ion-color-base-rgb: 136, 14, 211;
+    --ion-color-contrast: #c985f7;
+    --ion-color-contrast-rgb: 201, 133, 247;
+    --ion-color-shade: #780cba;
+    --ion-color-tint: #9426d7;
+  }
 }

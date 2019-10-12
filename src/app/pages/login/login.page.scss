@@ -1,0 +1,18 @@
+.background-card {
+  --background: #c985f7;
+  /* --color: #674087; */
+  --color: transparent !important;
+}
+
+ion-card,
+ion-card-title,
+ion-label,
+div {
+  --color: #c985f7 !important;
+  color: #c985f7 !important;
+}
+
+.img-logo {
+  height: 4rem;
+  width: auto;
+}

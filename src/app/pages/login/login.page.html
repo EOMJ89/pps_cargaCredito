@@ -1,0 +1,88 @@
+<ion-content class="background-page">
+    <div class="height-100 center-vertical">
+        <div class="width-100">
+            <ion-card-header>
+                <ion-card-title class="ion-text-center">
+                    <div class="center-vertical center-horizontal flex-v">
+                        Inicio de Sesión
+                        <img src="../../../assets/logo_transparent.png"
+                            class="img-logo" style="margin-left: 1rem;">
+                    </div>
+                </ion-card-title>
+            </ion-card-header>
+            <ion-card-content *ngIf="this.formGroup != undefined">
+                <form [formGroup]="this.formGroup">
+                    <ion-item class="transparent-item">
+                        <ion-label position="stacked">Correo</ion-label>
+                        <ion-input type="email" formControlName="correo"></ion-input>
+                        <div *ngIf="this.formGroup.controls.correo.touched ==
+                            true &&
+                            this.formGroup.controls.correo.errors != undefined">
+                            <div
+                                *ngIf="this.formGroup.controls.correo.errors.required
+                                != undefined">El correo es requerido
+                            </div>
+                            <div
+                                *ngIf="this.formGroup.controls.correo.errors.email
+                                != undefined">El correo no tiene el formato correcto
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="transparent-item">
+                        <ion-label position="stacked">Clave</ion-label>
+                        <ion-input type="password" formControlName="clave"></ion-input>
+                        <div *ngIf="this.formGroup.controls.clave.touched ==
+                            true &&
+                            this.formGroup.controls.clave.errors != undefined">
+                            <div
+                                *ngIf="this.formGroup.controls.clave.errors.required
+                                != undefined">La clave es requerida
+                            </div>
+                            <div
+                                *ngIf="this.formGroup.controls.clave.errors.minlength
+                                != undefined">La clave no debe ser de menos de 6 carácteres
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-row class="ion-justify-content-center">
+                        <ion-col class="ion-text-center">
+                            <ion-button color="success"
+                                [disabled]="!this.formGroup.valid"
+                                (click)="iniciarSesion()" shape="round">Entrar</ion-button>
+                        </ion-col>
+                        <ion-col class="ion-text-center">
+                            <ion-button color="danger" type="reset"
+                                shape="round" (click)="this.limpiarForm()">Borrar</ion-button>
+                        </ion-col>
+                    </ion-row>
+                    <ion-item class="transparent-item"
+                        *ngIf="this.formGroup.pristine == true &&
+                        this._errorMessage != ''">
+                        <!-- Pristine {{this.formGroup.pristine}}<br>
+                      Error {{this._errorMessage}} -->
+                        <ion-label class="ion-text-center">
+                            ¡Error! {{this._errorMessage}}
+                        </ion-label>
+                    </ion-item>
+                </form>
+                <ion-row class="ion-justify-content-center">
+                    <ion-col>
+                        <ion-item class="transparent-item">
+                            <ion-label>Seleccionar usuario</ion-label>
+                            <ion-select okText="Elegir"
+                                cancelText="Cancelar"
+                                [(ngModel)]="userType"
+                                (ionChange)="rellenarCampos(userType)">
+                                <ion-select-option value="admin">Administrador</ion-select-option>
+                                <ion-select-option value="invitado">Invitado</ion-select-option>
+                                <ion-select-option value="usuario">Usuario</ion-select-option>
+                                <ion-select-option value="anonimo">Anónimo</ion-select-option>
+                                <ion-select-option value="tester">Tester</ion-select-option>
+                            </ion-select>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+            </ion-card-content>
+        </div>
+    </div>
+</ion-content>

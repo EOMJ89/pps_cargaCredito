@@ -1,0 +1,51 @@
+.alarm {
+  border: none;
+  border-radius: 50%;
+  background-color: #7f36af;
+  text-align: center;
+  box-shadow: 0 0.75rem #3b1257;
+  outline: none;
+  color: #261832;
+}
+
+.alarm:active {
+  background-color: #c985f7;
+  color: #261832;
+  box-shadow: 0 0.4rem #6d3394;
+  transform: translateY(0.5rem);
+  outline: none;
+}
+
+.square-button {
+  height: 16rem;
+  width: 16rem;
+}
+
+.img-button {
+  height: 12rem;
+  width: 12rem;
+}
+
+.flex {
+  &-v {
+    display: flex;
+    flex-direction: column;
+  }
+  &-h {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.big-number {
+  font-family: "Tech";
+  padding: 0.2rem 0rem 0.2rem 0rem;
+  font-size: 5rem !important;
+  /* font-weight: bold; */
+}
+
+.color-text {
+  /* color: #260b38; */
+  color: #c985f7;
+  font-size: 1.2rem;
+}

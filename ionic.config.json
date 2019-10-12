@@ -1,5 +1,7 @@
 {
   "name": "cargaCredito",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

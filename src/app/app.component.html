@@ -1,3 +1,20 @@
 <ion-app>
+  <div *ngIf="this.showSplash" class="splash">
+    <div class="spinner" [ngClass]="{
+      'spinner-landscape': this.platform.isLandscape(),
+      'spinner-portrait': !this.platform.isLandscape()
+      }"><img src="../assets/splash_nombre.png">
+    </div>
+    <div class="ld spinner" [ngClass]="{
+      'spinner-landscape': this.platform.isLandscape(),
+      'spinner-portrait': !this.platform.isLandscape()
+      }"><img src="../assets/splash_logo_main.png">
+    </div>
+    <div class="ld ld-heartbeat spinner" [ngClass]="{
+      'spinner-landscape': this.platform.isLandscape(),
+      'spinner-portrait': !this.platform.isLandscape()
+      }"><img src="../assets/splash_logo_lock.png">
+    </div>
+  </div>
   <ion-router-outlet></ion-router-outlet>
 </ion-app>
